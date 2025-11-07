@@ -33,6 +33,7 @@ if (!dador || !receptor) {
   let count = 10; // cuenta atrás en segundos
 
   window.addEventListener("load", () => {
+    introEl.classList.remove("hidden");
     setTimeout(() => {
       introEl.classList.add("hidden");
       countdownEl.classList.remove("hidden");
