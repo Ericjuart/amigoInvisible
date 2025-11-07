@@ -23,6 +23,7 @@ const { dador, receptor } = getDecodedNames();
 const countdownEl = document.getElementById("countdown");
 const revealEl = document.getElementById("reveal");
 const nombreEl = document.getElementById("nombre");
+const imagenEl = document.getElementById("imagen");
 
 // Si los datos son inválidos, muestra error y corta
 if (!dador || !receptor) {
@@ -41,6 +42,7 @@ if (!dador || !receptor) {
           countdownEl.classList.add("hidden");
           revealEl.classList.remove("hidden");
           nombreEl.textContent = receptor;
+          imagenEl.src = `./Amigos/${receptor}.jpg`;
         }
       }, 1000);
     }, 2000); // espera 2s antes de iniciar la cuenta atrás (puedes ajustar)
