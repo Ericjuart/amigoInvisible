@@ -33,7 +33,6 @@ if (!dador || !receptor) {
   let count = 10; // cuenta atrás en segundos
 
   window.addEventListener("load", () => {
-    introEl.classList.remove("hidden");
     setTimeout(() => {
       introEl.classList.add("hidden");
       countdownEl.classList.remove("hidden");
@@ -47,7 +46,7 @@ if (!dador || !receptor) {
           nombreEl.textContent = receptor;
           imagenEl.src = `./Amigos/${receptor}.jpg`;
         }
-      }, 500);
+      }, 1000);
     }, 5000); // espera 2s antes de iniciar la cuenta atrás (puedes ajustar)
   });
 }
