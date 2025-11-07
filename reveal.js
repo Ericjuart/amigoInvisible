@@ -47,6 +47,6 @@ if (!dador || !receptor) {
           imagenEl.src = `./Amigos/${receptor}.jpg`;
         }
       }, 1000);
-    }, 2000); // espera 2s antes de iniciar la cuenta atrás (puedes ajustar)
+    }, 5000); // espera 2s antes de iniciar la cuenta atrás (puedes ajustar)
   });
 }
