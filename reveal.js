@@ -47,7 +47,7 @@ if (!dador || !receptor) {
           nombreEl.textContent = receptor;
           imagenEl.src = `./Amigos/${receptor}.jpg`;
         }
-      }, 1000);
+      }, 500);
     }, 5000); // espera 2s antes de iniciar la cuenta atrás (puedes ajustar)
   });
 }
