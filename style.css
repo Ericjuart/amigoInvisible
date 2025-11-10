@@ -39,14 +39,14 @@ button:hover {
 }
 
 video#intro {
-  width: 100%;
-  height: 100vh;
+  width: 70%;
+  height: 80vh;
   object-fit: cover;
   position: fixed;
-  top: 0;
-  left: 0;
+  top: 10%;
+  left: 15%;
   z-index: 0;
-  filter: brightness(0.5);
+  text-align: center;
 }
 
 .overlay {
@@ -71,6 +71,16 @@ video#intro {
 
 .hidden {
   display: none;
+}
+
+#imagen{
+  width: 25%;
+}
+
+@media (max-width: 600px) {
+  #imagen {
+    width: 80%;
+  }
 }
 
 @keyframes fadeIn {

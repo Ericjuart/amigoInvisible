@@ -1,9 +1,9 @@
 [
-  { "nombre": "ALBERTO", "alias": "FURBI" },
-  { "nombre": "ALVARO", "alias": "TRASKI" },
-  { "nombre": "ORIOL", "alias": "OREJIKAS" },
-  { "nombre": "JOSUA", "alias": "NAPIUDO" },
+  { "nombre": "EL FURBI", "alias": "ALBERTO" },
+  { "nombre": "EL SETICA", "alias": "ALVARO" },
+  { "nombre": "EL OREJIKAS", "alias": "ORIOL" },
+  { "nombre": "EL NAPIUDO", "alias": "JOSUA" },
   { "nombre": "KOLDO", "alias": "KOLDO" },
-  { "nombre": "EDGAR", "alias": "SAPO" },
-  { "nombre": "JUAREZ", "alias": "ARDILLA" }
+  { "nombre": "EL SAPO", "alias": "EDGAR" },
+  { "nombre": "LA ARDILLA", "alias": "JUAREZ" }
 ]

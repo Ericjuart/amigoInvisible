@@ -24,17 +24,19 @@ const countdownEl = document.getElementById("countdown");
 const revealEl = document.getElementById("reveal");
 const nombreEl = document.getElementById("nombre");
 const imagenEl = document.getElementById("imagen");
+const titempEl = document.getElementById("titemp");
 const introEl = document.getElementById("intro");
 
 // Si los datos son inválidos, muestra error y corta
 if (!dador || !receptor) {
   document.body.innerHTML = "<h2>⚠️ Enlace inválido o corrupto.</h2>";
 } else {
-  let count = 10; // cuenta atrás en segundos
+  let count = 5; // cuenta atrás en segundos
 
   window.addEventListener("load", () => {
     setTimeout(() => {
       introEl.classList.add("hidden");
+      titempEl.classList.add("hidden");
       countdownEl.classList.remove("hidden");
       const timer = setInterval(() => {
         countdownEl.textContent = count;
@@ -43,10 +45,10 @@ if (!dador || !receptor) {
           clearInterval(timer);
           countdownEl.classList.add("hidden");
           revealEl.classList.remove("hidden");
-          nombreEl.textContent = receptor;
+          nombreEl.textContent = "!!!!!!!!!!  "+receptor+"  !!!!!!!!!!";
           imagenEl.src = `./Amigos/${receptor}.jpg`;
         }
       }, 1000);
-    }, 5000); // espera 2s antes de iniciar la cuenta atrás (puedes ajustar)
+    }, 6000); // espera 2s antes de iniciar la cuenta atrás (puedes ajustar)
   });
 }

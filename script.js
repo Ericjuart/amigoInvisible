@@ -1,3 +1,23 @@
+// ===============================
+// Función para descargar un archivo JSON
+// ===============================
+function descargarArchivo(nombre, contenido) {
+  const blob = new Blob([contenido], { type: "application/json" });
+  const url = URL.createObjectURL(blob);
+
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = nombre;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+
+  URL.revokeObjectURL(url);
+}
+
+// ===============================
+// FUNCIÓN PRINCIPAL DEL SORTEO
+// ===============================
 async function sortear() {
   const participantes = await fetch("./data/participantes.json").then(r => r.json());
   const historico = await fetch("./data/historico.json").then(r => r.json());
@@ -30,7 +50,9 @@ async function sortear() {
     return;
   }
 
-  // Mostrar resultado en pantalla (solo para ti, el “admin”)
+  // ===============================
+  // Mostrar resultado en pantalla
+  // ===============================
   const contenedor = document.getElementById("resultado");
   contenedor.innerHTML = "<h3>Resultado del sorteo:</h3>";
   const lista = document.createElement("ul");
@@ -51,6 +73,19 @@ async function sortear() {
   });
 
   contenedor.appendChild(lista);
+
+  // ===============================
+  // GENERAR JSON PARA DESCARGAR
+  // ===============================
+  const jsonResultado = JSON.stringify(asignaciones, null, 2);
+
+  const btn = document.getElementById("descargar");
+  if (btn) {
+    btn.onclick = () => {
+      const nombreArchivo = `resultado-${new Date().getFullYear()}.json`;
+      descargarArchivo(nombreArchivo, jsonResultado);
+    };
+  }
 }
 
 document.getElementById("sortear").addEventListener("click", sortear);
