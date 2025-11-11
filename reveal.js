@@ -45,7 +45,7 @@ if (!dador || !receptor) {
           clearInterval(timer);
           countdownEl.classList.add("hidden");
           revealEl.classList.remove("hidden");
-          nombreEl.textContent = "!!!!!!!!!!  "+receptor+"  !!!!!!!!!!";
+          nombreEl.textContent = "!!!!!  "+receptor+"  !!!!!";
           imagenEl.src = `./Amigos/${receptor}.jpg`;
         }
       }, 1000);
